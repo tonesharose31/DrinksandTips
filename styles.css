@@ -7,8 +7,10 @@ html,
 body {
   margin: 0;
   padding: 0;
- font-family: sans-serif;
+ font-family: ariel,sans-serif;
  background-color: #f2f2f2;
+ grid-template-columns: 2fr 2fr;
+ display: grid;
 }
 
 h1 {
@@ -18,8 +20,8 @@ h1 {
 }
 
 .game-section {
-  display: flex;
-display: grid;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   margin-top: 20px;
 }
@@ -54,4 +56,11 @@ button#reset-button{
 
 button#reset-button :hover{
 background-color: #555;
+}
+
+main {display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin: 25px auto;
+  width: 80%;
+
 }
