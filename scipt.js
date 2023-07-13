@@ -22,7 +22,7 @@ function squareClicked(index){
         square.textContent = currentPlayer;
         square.classList.remove('empty');
 
-        currentPlayer = currentPlayer === 'X'? 'O' : 'x';
+        currentPlayer = currentPlayer === 'X'? 'O' : 'X';
         gameSection.textContent = `Player ${currentPlayer}'s turn`; 
     }
 }

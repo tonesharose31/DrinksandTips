@@ -1,15 +1,5 @@
 
 html,
-body {
-
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: "Raleway", sans-serif;
-      background-color: black;
-      color: ghostwhite;
-    }
-
 
 h1{
   font-family: "Dancing Script", cursive;
@@ -17,12 +7,12 @@ h1{
 
 #game-section{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(1fr,1fr, 1fr);
   grid-gap: 10px;
  margin: top 20px; 
 }
 
-.squares{
+.square{
     display: flex;
     justify-content: center;
     font-size: 48px;
