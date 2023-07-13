@@ -14,19 +14,36 @@ function createGameBoard() {
     }
 });
 gameSection.appendChild(square); 
-
+}
+}
 
 
 function resetGame() {
-  let squares = gameSection.querySelectorAll ('square');
+  let squares = document.querySelectorAll ('.square');
  squares.forEach(square => {
      square.classList.add('empty');
      square.textContent = '';
   });
-  currentPlayer = 'X';
-  gameSection.textContent = '';
+ isxPlayerTurn = true;
+
 }
 
-button.addEventListener('click', resetGame);
+let letsPlayButton = document.querySelector('button');
+letsPlayButton.addEventListener("click",letsPlay);
 
-createGameBoard();
+function makeMoves(square){
+    if(square.classList.contains("empty")){
+        if(isxPlayerTurn){
+            square.textContent = "X";
+
+        }else{
+            square.textContent = "O";
+        }
+        square.classList.remove("empty");
+        isxPlayerTurn = !isxPlayerTurn;
+
+    }
+    
+let isxPlayerTurn = true;
+    createGameBoard();
+}
