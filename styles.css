@@ -1,7 +1,7 @@
 
-*{
+/* *{
     box-sizing: border-box;
-} 
+}  */
 
 
 body {
@@ -18,7 +18,7 @@ header {
   display:table-column;
   font-size: 40px;
   text-align: center;
-  color: blueviolet;
+  color: black;
 
 }
 
@@ -71,15 +71,26 @@ main{display: grid;
 
 main img{
  border: 3px solid blueviolet;
- border-radius: px;
 height:100px ;
 object-fit: cover;
 object-position: 25%;
 width: 100%;
 }
 
+footer { 
+  background-color: blueviolet;
+  color: rgb(7, 5, 1);
+  font-size: 14px;
+  padding: 25px;
+  text-align: left;
+   }
+
+
+
 li{list-style: none;}
 
-image.drinks{
-  box-sizing: ;
-}
+header{font-size:42px;
+  background:blueviolet;
+  text-align: center;
+  margin-top:auto;
+} 
