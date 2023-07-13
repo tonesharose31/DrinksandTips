@@ -10,9 +10,8 @@ body {
  font-family: ariel,sans-serif;
  background-color: #f2f2f2;
  grid-template-columns: 1fr, 1fr;
- display: grid;
+ display: grid;}
 
-}
 
 header {
   display:table-column;
@@ -66,7 +65,11 @@ background-color: #555;
 main{display: grid;
   grid-template-columns: 2fr 2fr;
   margin: 25px auto;
-  width: 80%;
+  width: 90%;
+  padding-left: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom:10px;
 } 
 
 main img{
