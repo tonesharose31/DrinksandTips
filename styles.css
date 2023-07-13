@@ -1,7 +1,7 @@
 
 *{
     box-sizing: border-box;
-}
+} 
 
 
 body {
@@ -9,20 +9,23 @@ body {
   padding: 0;
  font-family: ariel,sans-serif;
  background-color: #f2f2f2;
- grid-template-columns: 2fr 2fr;
+ grid-template-columns: 3fr;
  display: grid;
+
 }
 
 header {
   display:table-column;
   font-size: 40px;
   text-align: center;
-  color: blue;
+  color: blueviolet;
 
 }
 
 .game-section {
  display: grid;
+ width: 300px;
+ height: 300px;
  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   margin-top: 15px;
@@ -44,25 +47,39 @@ margin: 5px;
   background-color: blueviolet;
 }
 
-button#reset-button{
+
+#reset-button{
   display: block;
   margin: 20px auto;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: blueviolet;
   color: #fff;
   cursor: pointer;
   border: none;
 }
 
 
-
-button#reset-button :hover{
+#reset-button :hover{
 background-color: #555;
 }
 
-.frame{display: grid;
+main{display: grid;
   grid-template-columns: 2fr 2fr;
   margin: 25px auto;
   width: 80%;
-
 } 
+
+main img{
+ border: 3px solid blueviolet;
+ border-radius: px;
+height:100px ;
+object-fit: cover;
+object-position: 25%;
+width: 100%;
+}
+
+li{list-style: none;}
+
+image.drinks{
+  box-sizing: ;
+}
