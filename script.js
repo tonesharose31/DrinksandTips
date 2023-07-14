@@ -74,33 +74,31 @@ createGameBoard();
 
 
 
-const BASE_URL= "www.thecocktaildb.com/api/json/v1/1/random.php";
 
-const favoriteNumber = document.querySelector("randomNumber");
-const randomButton = document.querySelector("submit");
-const randomCocktail = document.querySelector("gameForm")
+const favoriteNumber = document.querySelector("#randomNumber");
+const randomButton = document.querySelector("#gameForm button[type='submit']");
+const randomCocktail= document.querySelector("#gameForm article");
+// const resetButton = document.querySelector("#resetButton");
 
-resetButton.addEventListener("click", (e) => { 
+randomButton.addEventListener("click", (e) => { 
   e.preventDefault();
-const id = favoriteNumber.value; 
-
+  const id = favoriteNumber.value; 
+  const BASE_URL= (`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
+  
   fetch(`${BASE_URL}/${id}`)
-  .then(data => data.json())
-  .then(json => {
-
-    fetchRandomCocktail(json)
+  .then(response => response.json())
+  .then(data => { 
+   const randomCocktail = data.drinks[0];
+   fetchRandomCocktail(cocktail);
   })
-    const randomCocktail = data.drinks[1];
-    const cocktailName = randomCocktail.strDrink;
-     
-})
-function fetchRandomCocktail() { 
-.catch(error => {
-    console.log('Error fetching cocktails:', error);
-});
-}
 
-randomButton.addEventListener("click", function () {
-  fetchRandomCocktail();
+  .catch(err => showError(error));
 });
-fetchRandomCocktail();
+  
+  const fetchRandomCocktail = (cocktail) => {
+    randomCocktail.innerHTML = ` <article>
+   <img src= "${cocktail.strDrinkThumb}" alt= ${cocktail.strDrink}" />
+   <h2>${cocktail.strDrink}</h2>
+   <p>${cocktail.strInstructions}</p>
+   </article>` ; 
+  }; 
