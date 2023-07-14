@@ -80,34 +80,52 @@ const randomButton = document.querySelector("#gameForm button[type='submit']");
 const randomCocktail= document.querySelector("#gameForm article");
 // const resetButton = document.querySelector("#resetButton");
 
+const BASE_URL= "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+
 randomButton.addEventListener("click", (e) => { 
   e.preventDefault();
-  const id = favoriteNumber.value; 
-  const BASE_URL= `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
+
+  const showError = (err) => {
+    randomCocktail.innerHTML = `
+     <section class="error">
+          <p>There was an error!</p>
+          <p class="message">${err}</p>
+      </section>
+  `;
+  }
+
+  // const id = favoriteNumber.value; 
   
   fetch(BASE_URL)
-  .then(data => data.json())
+  .then(response=> response.json())
   .then(data => { 
-   const cocktail = data.drinks[0];
-   fetchRandomCocktail(cocktail);
-  })
+   const cocktail = data.drinks?.[0];
+   if(cocktail) { 
+ fetchRandomCocktail(cocktail);
+   }else{  showError("No coctails found.")
+  }
+})
 
   .catch(err => showError(err));
 });
   
   const fetchRandomCocktail = (cocktail) => {
-    randomCocktail.innerHTML = ` <article>
-   <img src= "${randomCocktail.strDrinkThumb}" alt= ${randomCocktail.strDrink}" />
-   <h2>${randomCocktail.idDrink}</h2>
-   <p>${randomCocktail.strInstructions}</p>
-   </article>` ; 
-  }; 
 
-  const showError = (err) => {
-   randomCocktail.innerHTML = `
-    <section class="error">
-         <p>There was an error!</p>
-         <p class="message">${err}</p>
-     </section>
- `;
- }
+      randomCocktail.innerHTML = 
+      ` <article>
+      <img src= "${cocktail.strDrinkThumb}" alt= ${cocktail.strDrink}" />
+      <h2>${cocktail.strDrink}</h2>
+      <p>${cocktail.strInstructions}</p>
+      </article>` ; 
+    };
+      showError("No cocktails found.");
+  
+
+//   const showError = (err) => {
+//    randomCocktail.innerHTML = `
+//     <section class="error">
+//          <p>There was an error!</p>
+//          <p class="message">${err}</p>
+//      </section>
+//  `;
+//  }
