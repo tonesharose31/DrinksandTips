@@ -109,7 +109,7 @@ li{list-style: none;}
 form input,
 form label
 form textarea {
-    box-sizing: border-box;
+    box-sizing:content-box;
     display: block;
     margin: 3px 0;
     width:100%;
