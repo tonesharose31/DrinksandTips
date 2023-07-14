@@ -1,5 +1,14 @@
 const gameSection = document.querySelector('.game-section');
 const resetButton = document.querySelector('#reset-button');
+
+
+button.addEventListener("click", (e) => {
+  e.preventDefault();
+
+
+
+
+
 let currentPlayer = 'X';
 let gameBoard = Array(9).fill('');
 
@@ -70,7 +79,13 @@ resetButton.addEventListener('click', resetGame);
 
 createGameBoard();
 
-fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+
+
+const BASE_URL= "www.thecocktaildb.com/api/json/v1/1/random.php"
+
+
+
+fetch(`${BASE_URL}/${strDrink}`)
 .then(response => response.json())
 .then(data => {
     console.log(data);
