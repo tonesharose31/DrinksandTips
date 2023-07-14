@@ -90,7 +90,7 @@ randomButton.addEventListener("click", (e) => {
   fetch(BASE_URL)
   .then(response=> response.json())
   .then(data => { 
-   const cocktail = data.drinks?.[0];
+   const cocktail = data.strDrinks[0];
    if(cocktail) { 
  fetchRandomCocktail(cocktail);
    }else{  showError("No coctails found.")
@@ -101,16 +101,17 @@ randomButton.addEventListener("click", (e) => {
 });
   
   const fetchRandomCocktail = (cocktail) => {
-
+    if(cocktail)
       randomCocktail.innerHTML = 
       ` <article>
       <img src= "${cocktail.strDrinkThumb}" alt= ${cocktail.strDrink}" />
       <h2>${cocktail.strDrink}</h2>
       <p>${cocktail.strInstructions}</p>
       </article>` ; 
-    };
+    } else { 
       showError("No cocktails found.");
-  
+    }
+  };
 
   const showError = (err) => {
    randomCocktail.innerHTML = `
@@ -119,4 +120,4 @@ randomButton.addEventListener("click", (e) => {
          <p class="message">${err}</p>
      </section>
  `;
- }
+ };
