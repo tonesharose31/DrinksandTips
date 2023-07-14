@@ -83,22 +83,31 @@ const randomCocktail= document.querySelector("#gameForm article");
 randomButton.addEventListener("click", (e) => { 
   e.preventDefault();
   const id = favoriteNumber.value; 
-  const BASE_URL= (`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
+  const BASE_URL= `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
   
-  fetch(`${BASE_URL}/${id}`)
-  .then(response => response.json())
+  fetch(BASE_URL)
+  .then(data => data.json())
   .then(data => { 
-   const randomCocktail = data.drinks[0];
+   const cocktail = data.drinks[0];
    fetchRandomCocktail(cocktail);
   })
 
-  .catch(err => showError(error));
+  .catch(err => showError(err));
 });
   
   const fetchRandomCocktail = (cocktail) => {
     randomCocktail.innerHTML = ` <article>
-   <img src= "${cocktail.strDrinkThumb}" alt= ${cocktail.strDrink}" />
-   <h2>${cocktail.strDrink}</h2>
-   <p>${cocktail.strInstructions}</p>
+   <img src= "${randomCocktail.strDrinkThumb}" alt= ${randomCocktail.strDrink}" />
+   <h2>${randomCocktail.idDrink}</h2>
+   <p>${randomCocktail.strInstructions}</p>
    </article>` ; 
   }; 
+
+  const showError = (err) => {
+   randomCocktail.innerHTML = `
+    <section class="error">
+         <p>There was an error!</p>
+         <p class="message">${err}</p>
+     </section>
+ `;
+ }
