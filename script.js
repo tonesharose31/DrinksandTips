@@ -74,15 +74,33 @@ createGameBoard();
 
 
 
-const BASE_URL= "www.thecocktaildb.com/api/json/v1/1/random.php"
+const BASE_URL= "www.thecocktaildb.com/api/json/v1/1/random.php";
 
+const favoriteNumber = document.querySelector("randomNumber");
+const randomButton = document.querySelector("submit");
+const randomCocktail = document.querySelector("gameForm")
 
+resetButton.addEventListener("click", (e) => { 
+  e.preventDefault();
+const id = favoriteNumber.value; 
 
-fetch(`${BASE_URL}/${id}`)
-.then(response => response.json())
-.then(data => {
-    console.log(data);
+  fetch(`${BASE_URL}/${id}`)
+  .then(data => data.json())
+  .then(json => {
+
+    fetchRandomCocktail(json)
+  })
+    const randomCocktail = data.drinks[1];
+    const cocktailName = randomCocktail.strDrink;
+     
 })
+function fetchRandomCocktail() { 
 .catch(error => {
     console.log('Error fetching cocktails:', error);
 });
+}
+
+randomButton.addEventListener("click", function () {
+  fetchRandomCocktail();
+});
+fetchRandomCocktail();
