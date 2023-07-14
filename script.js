@@ -1,3 +1,4 @@
+
 const gameSection = document.querySelector('.game-section');
 const resetButton = document.querySelector('#reset-button');
 
@@ -90,7 +91,7 @@ randomButton.addEventListener("click", (e) => {
   fetch(BASE_URL)
   .then(response=> response.json())
   .then(data => { 
-   const cocktail = data.strDrinks[0];
+   const cocktail = data.drinks[0];
    if(cocktail) { 
  fetchRandomCocktail(cocktail);
    }else{  showError("No coctails found.")
@@ -106,11 +107,9 @@ randomButton.addEventListener("click", (e) => {
       ` <article>
       <img src= "${cocktail.strDrinkThumb}" alt= ${cocktail.strDrink}" />
       <h2>${cocktail.strDrink}</h2>
-      <p>${cocktail.strInstructions}</p>
+      <h3>${cocktail.strInstructions}</h3>
       </article>` ; 
-    } else { 
-      showError("No cocktails found.");
-    }
+  
   };
 
   const showError = (err) => {
