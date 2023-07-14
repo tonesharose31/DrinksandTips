@@ -85,16 +85,7 @@ const BASE_URL= "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 randomButton.addEventListener("click", (e) => { 
   e.preventDefault();
 
-  const showError = (err) => {
-    randomCocktail.innerHTML = `
-     <section class="error">
-          <p>There was an error!</p>
-          <p class="message">${err}</p>
-      </section>
-  `;
-  }
-
-  // const id = favoriteNumber.value; 
+  const id = favoriteNumber.value; 
   
   fetch(BASE_URL)
   .then(response=> response.json())
@@ -121,11 +112,11 @@ randomButton.addEventListener("click", (e) => {
       showError("No cocktails found.");
   
 
-//   const showError = (err) => {
-//    randomCocktail.innerHTML = `
-//     <section class="error">
-//          <p>There was an error!</p>
-//          <p class="message">${err}</p>
-//      </section>
-//  `;
-//  }
+  const showError = (err) => {
+   randomCocktail.innerHTML = `
+    <section class="error">
+         <p>There was an error!</p>
+         <p class="message">${err}</p>
+     </section>
+ `;
+ }
