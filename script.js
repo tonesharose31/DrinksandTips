@@ -101,9 +101,9 @@ randomButton.addEventListener("click", (e) => {
   .catch(err => showError(err));
 });
   
-  const fetchRandomCocktail = (cocktail) => {
+  const fetchRandomCocktail = (strDrink) => {
     if(cocktail)
-      randomCocktail.innerHTML = 
+     drinks.innerHTML = 
       ` <article>
       <img src= "${cocktail.strDrinkThumb}" alt= ${cocktail.strDrink}" />
       <h2>${cocktail.strDrink}</h2>
@@ -113,9 +113,9 @@ randomButton.addEventListener("click", (e) => {
   };
 
   const showError = (err) => {
-   randomCocktail.innerHTML = `
+   cocktail.innerHTML = `
     <section class="error">
-         <p>There was an error!</p>
+         <p>There was an error fetching random cocktail!</p>
          <p class="message">${err}</p>
      </section>
  `;
