@@ -101,7 +101,9 @@ footer {
   text-align: left;
 }
 
-
+#randomCocktail{
+  background-color: red;
+}
 
 li{list-style: none;}
 
