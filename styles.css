@@ -102,7 +102,9 @@ footer {
 }
 
 #randomCocktail{
-  background-color: red;
+  background-color: blueviolet;
+  shape-image-threshold:initial;
+  border-radius: 10px;
 }
 
 li{list-style: none;}

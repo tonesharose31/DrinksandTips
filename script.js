@@ -86,7 +86,7 @@ const BASE_URL= "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 randomButton.addEventListener("click", (e) => { 
   e.preventDefault();
 
-  const id = favoriteNumber.value; 
+  //const id = favoriteNumber.value; 
   
   fetch(BASE_URL)
   .then(response=> response.json())
@@ -100,7 +100,7 @@ randomButton.addEventListener("click", (e) => {
          <img src= "${cocktail.strDrinkThumb}" alt= ${cocktail.strDrink}" />
          <h3>${cocktail.strInstructions}</h3>
          </div>` ; 
-    debugger
+  
 //  fetchRandomCocktail(cocktail);
    }else{  showError("No cocktails found.")
   }
@@ -120,11 +120,11 @@ randomButton.addEventListener("click", (e) => {
   
 //   };
 
-  const showError = (err) => {
-randomCocktail.innerHTML = `
-    <section class="error">
-         <p>There was an error fetching random cocktail!</p>
-         <p class="message">${err}</p>
-     </section>
- `;
- };
+//   const showError = (err) => {
+// randomCocktail.innerHTML = `
+//     <section class="error">
+//          <p>There was an error fetching random cocktail!</p>
+//          <p class="message">${err}</p>
+//      </section>
+//  `;
+//  };
