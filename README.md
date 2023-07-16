@@ -12,4 +12,4 @@ User also has access to a the reset button on the tic-tac-toe incase of a restar
  user can also choose a random or their their favorite number to enter into the form feild to be shown a random cocktail with all of it's information from a live DBCocktails api. 
 
 
-User Must enter all required fields, in order to execute the functions of the app. 
+User must follow the instructions given in oder to execute the functionality of the page .

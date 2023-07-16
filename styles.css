@@ -15,13 +15,12 @@ min-height: 100vh;
 body{background-image:url("images/blaknvioletblue.png");}
 
 .container {
-  display: flex;
+display: flex;
 flex-direction:column;
 min-height: 100vh;
 }
 
 header {
-  /* display:table-column; */
   font-size: 40px;
   text-align: center;
   padding-top: 25px;
@@ -62,7 +61,6 @@ margin: 5px;
 #reset-button{
   display: block;
   margin:  auto;
-  /* padding: 10px 20px; */
   background-color: blueviolet;
   color: black;
   cursor: pointer;
@@ -82,18 +80,14 @@ background-color: #555;
 
 }
 
+
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  display: grid;
-  grid-template-rows: 2fr;
-} 
-
-.container{
-   grid-template-columns: 1fr; 
+  padding-bottom: 3px;
 }
+
 
 footer { 
   background-color: blueviolet;
@@ -102,6 +96,7 @@ footer {
   padding: 25px;
   text-align: left;
 }
+
 
 #randomCocktail{
   background-color: blueviolet;

@@ -76,10 +76,9 @@ createGameBoard();
 
 
 
-// const favoriteNumber = document.querySelector("#randomNumber");
 const randomButton = document.querySelector("#gameForm button[type='submit']");
 const randomCocktail= document.getElementById("randomCocktail");
-// const resetButton = document.querySelector("#resetButton");
+
 
 const BASE_URL= "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
