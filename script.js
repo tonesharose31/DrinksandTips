@@ -76,7 +76,7 @@ createGameBoard();
 
 
 
-const favoriteNumber = document.querySelector("#randomNumber");
+// const favoriteNumber = document.querySelector("#randomNumber");
 const randomButton = document.querySelector("#gameForm button[type='submit']");
 const randomCocktail= document.getElementById("randomCocktail");
 // const resetButton = document.querySelector("#resetButton");
@@ -104,6 +104,5 @@ randomButton.addEventListener("click", (e) => {
    }else{  showError("No cocktails found.")
   }
 })
-
   .catch(err => showError(err));
 });

@@ -2,16 +2,17 @@ body
 {
   margin: 0;
   padding: 0px;
-/* padding-bottom: 0px; */
+ padding-bottom: 0px; 
  font-family: ariel,sans-serif;
  background-color: #f2f2f2;
- /* grid-template-columns: 1fr, 1fr;
- display: grid; */
-background-image:url("images/blaknvioletblue.png");
-display: flex;
-flex-direction: column;
+grid-template-columns: 1fr; 
+grid-template-rows: 1fr 1fr;
+ display: grid; 
+/* flex-direction: column; */
 min-height: 100vh;
 }
+
+body{background-image:url("images/blaknvioletblue.png");}
 
 .container {
   display: flex;
@@ -23,13 +24,12 @@ header {
   /* display:table-column; */
   font-size: 40px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 25px;
   color: black;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background:blueviolet;
     text-align: center;
     margin-bottom:auto;
-  grid-column: 1 / -1;
   } 
 
 
@@ -87,10 +87,12 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  display: grid;
+  grid-template-rows: 2fr;
 } 
 
 .container{
-   grid-template-columns: 1fr 1fr; 
+   grid-template-columns: 1fr; 
 }
 
 footer { 
@@ -104,7 +106,8 @@ footer {
 #randomCocktail{
   background-color: blueviolet;
   shape-image-threshold:initial;
-  border-radius: 10px;
+  border-radius: 5px;
+  size: 10px;
 }
 
 li{list-style: none;}
@@ -117,5 +120,8 @@ form textarea {
     display: block;
     margin: 3px 0;
     width:100%;
-    
+}
+
+img{
+  width: 250px;
 }

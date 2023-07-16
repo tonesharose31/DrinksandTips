@@ -4,10 +4,12 @@ The app allows for the users to have fun while going down the child-hood memory 
 
 
 
-The functionality of this app allows the user to play a game of competive tic-tac-toe to see a winner at the end. (By Choice) 
-After a full round of play a winner of X or O is anno
+The functionality of this app allows the user to play a game of competitive tic-tac-toe to see a winner at the end. (By Choice) 
+After a full round of play a winner of X or O is annonced or even if their is a tie. 
 
-The user/users can also choose their favorite number to enter into the form feild to be shown a random cocktail with all of it's information from a live api. 
+User also has access to a the reset button on the tic-tac-toe incase of a restart. 
+
+ user can also choose a random or their their favorite number to enter into the form feild to be shown a random cocktail with all of it's information from a live DBCocktails api. 
 
 
 User Must enter all required fields, in order to execute the functions of the app. 
