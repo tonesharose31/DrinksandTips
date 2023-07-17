@@ -62,35 +62,32 @@ function announceTie() {
   gameSection.textContent = "It's a tie!";
 }
 
-function resetGame() {
-  gameBoard = Array(9).fill('');
-  currentPlayer = 'X';
-  gameSection.innerHTML = '';
-  createGameBoard();
-}
-
-resetButton.addEventListener('click', resetGame);
-
-createGameBoard();
 
 
 
 
-const randomButton = document.querySelector("#gameForm button[type='submit']");
+
+const cocktailForm = document.querySelector("#gameForm");
 const randomCocktail= document.getElementById("randomCocktail");
 
 
-const BASE_URL= "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
-randomButton.addEventListener("click", (e) => { 
+cocktailForm.addEventListener("submit", (e) => { 
   e.preventDefault();
-
   
-  fetch(BASE_URL)
+  const ingredientInput= document.getElementById("ingredientInput").value
+  const BASE_URL= "http://www.thecocktaildb.com/api/json/v1/1/";
+  const ingredientSearch = `filter.php?i=${ingredientInput}`
+
+
+  const searchUrl = BASE_URL + ingredientSearch
+
+  fetch(searchUrl)
   .then(response=> response.json())
   .then(data => { 
+    console.log(data)
    const cocktail = data.drinks[0];
-
+  
    if(cocktail) { 
      randomCocktail.innerHTML = 
          ` <div>
@@ -100,8 +97,8 @@ randomButton.addEventListener("click", (e) => {
          <h4>${cocktail.strIngredient1}</h4>
          </div>` ; 
   
-   }else{  showError("No cocktails found.")
+   }else{  console.log("No cocktails found.")
   }
 })
-  .catch(err => showError(err));
+  .catch(err => console.log(err));
 });
