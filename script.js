@@ -1,3 +1,8 @@
+// const page ="https://tonesharose31.github.io/Tic-Tac-Drink/"
+
+
+// index.innerHTML.use(cors({
+//   origin: page}));
 
 const gameSection = document.querySelector('.game-section');
 const resetButton = document.querySelector('#reset-button');
@@ -63,10 +68,6 @@ function announceTie() {
 }
 
 
-
-
-
-
 const cocktailForm = document.querySelector("#gameForm");
 const randomCocktail= document.getElementById("randomCocktail");
 
@@ -78,7 +79,7 @@ cocktailForm.addEventListener("submit", (e) => {
   const ingredientInput= document.getElementById("ingredientInput").value
   const BASE_URL= "http://www.thecocktaildb.com/api/json/v1/1/";
   const ingredientSearch = `filter.php?i=${ingredientInput}`
-
+  
 
   const searchUrl = BASE_URL + ingredientSearch
 
@@ -93,8 +94,8 @@ cocktailForm.addEventListener("submit", (e) => {
          ` <div>
          <h2>${cocktail.strDrink}</h2>
          <img src= "${cocktail.strDrinkThumb}" alt= ${cocktail.strDrink}" />
-         <h3>${cocktail.strInstructions}</h3>
-         <h4>${cocktail.strIngredient1}</h4>
+         <p>${cocktail.strInstructions}</p>
+         <p>${cocktail.strIngredient1}</p>
          </div>` ; 
   
    }else{  console.log("No cocktails found.")
