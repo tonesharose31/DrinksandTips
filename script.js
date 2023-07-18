@@ -146,7 +146,8 @@ const randomCocktail= document.getElementById("randomCocktail");
 cocktailForm.addEventListener("submit", (e) => { 
   e.preventDefault();
   
-  const ingredientInput= document.getElementById("ingredientInput").value
+  const ingredientInput= document.getElementById("ingredientInput").value;
+  const numOfDrinksInput = document.getElementById("numOfDrinksInput").value;
   const BASE_URL= "http://www.thecocktaildb.com/api/json/v1/1/";
   const ingredientSearch = `filter.php?i=${ingredientInput}`
   
@@ -158,17 +159,26 @@ cocktailForm.addEventListener("submit", (e) => {
   .then(data => { 
     console.log(data)
    const cocktail = data.drinks[0];
-  
+   
    if(cocktail) { 
-     randomCocktail.innerHTML = 
-         ` <div>
+     randomCocktail.innerHTML = "";
+     const numOfDrinks = Math.min(cocktail.length, numOfDrinksInput);
+     for(let i= 0; i < numOfDrinks; i++);
+     
+     const cocktailElement= document.createElement("div");
+     cocktailElement.innerHTML =
+     ` 
+     const cocktail = cocktail[i]
          <h2>${cocktail.strDrink}</h2>
          <img src= "${cocktail.strDrinkThumb}" alt= ${cocktail.strDrink}" />
-         <p>${cocktail.strInstructions}</p>
          <p>${cocktail.strIngredient1}</p>
-         </div>` ; 
-  
-   }else{  console.log("No cocktails found.")
+         <hr>` ; 
+
+         randomCocktail.appendChild(cocktailElement);
+   
+   }else{ 
+    randomCocktail.innerHTML = 
+    "<p>No cocktails found.</p>";
   }
 })
   .catch(err => console.log(err));
