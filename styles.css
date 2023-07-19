@@ -95,7 +95,7 @@ footer {
   padding: 25px;
   text-align: left;
 }
-
+ 
 
 #randomCocktail{
   background-color: blueviolet;
@@ -109,13 +109,19 @@ li{
 }
 
 
-form input,
+
 form label
 form textarea {
     margin: 3px 0;
     width:100%;
     display: 1fr;
 }
+
+.form-control{
+display: 1px;
+width: 25%;
+}
+
 
 img{
   width: 250px;
