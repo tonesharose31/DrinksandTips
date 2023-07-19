@@ -5,6 +5,8 @@ Ever wondered what cocktails you can create with your favorite ingredients? My p
 
 The functionality of this app allows the user to search for any cocktails through the form of ingredints and by way of any amount they desire to see at once. 
 
+The contact page has also been created witha a form where users can gave their commentary input and thougt feedbacks about the app.  
+
 
 
 
