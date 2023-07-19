@@ -10,7 +10,7 @@ cocktailForm.addEventListener("submit", (e) => {
   
   const ingredientInput= document.getElementById("ingredientInput").value;
   const numOfDrinksInput = document.getElementById("numOfDrinksInput").value;
-  const BASE_URL= "http://www.thecocktaildb.com/api/json/v1/1/";
+  const BASE_URL= "https://www.thecocktaildb.com/api/json/v1/1/";
   const ingredientSearch = `filter.php?i=${ingredientInput}`
   
 
@@ -38,7 +38,7 @@ cocktailForm.addEventListener("submit", (e) => {
    
    }else{ 
     randomCocktail.innerHTML = 
-    "<p>No cocktails Available.</p>";
+    "<p>No cocktails found.</p>";
   }
 })
   .catch(err => console.log(err));

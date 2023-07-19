@@ -104,7 +104,9 @@ footer {
   size: 10px;
 }
 
-
+li{
+  list-style: none;
+}
 
 
 form input,
