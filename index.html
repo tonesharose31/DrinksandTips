@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drinks_and_Tips</title>
-    <link rel="stylesheet" href= "node_modules/bootstrap.min.css">
+    <link rel="stylesheet" href= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel= "stylesheet" href="styles.css">
     
     
@@ -16,11 +16,12 @@
 <br>
    
 <article>
-    <form id="gameForm" class="row g-3">
+    <form 
+    id="gameForm" class="row g-3">
         <div class=col-auto">
         <fieldset>
-        <label for="ingredientInput" class="visually-hidden">Ingredient</label>
-          <input type ="text" id="ingredientInput" class="form-control" placeholder="Enter Ingredient...required">
+        <label for="ingredientInput"></label>
+          <input type ="text" id="ingredientInput" class="form-control" placeholder="Enter Ingredients" required>
           </div>
           <div class="col-auto"> 
             <label for=" for=numOfDrinksInput" class="visually-hidden"></label>
@@ -36,11 +37,6 @@
 
 <br>
 <div id="randomCocktail" class="row row-cols-1 row-cols-md-3 9-4"></div>
-    <ul>
-        <li>
-            <!-- <h6>Number Of Drinks Appear Here</h6> -->
-    Cocktail details will be inserted here!
-        </ul>
 </div>
   
     
@@ -56,7 +52,7 @@
         
  
     
-    <script src="node_modules/bootstrap/.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="script.js"></script>
     
 </body>
