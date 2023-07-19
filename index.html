@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drinks_and_Tips</title>
-    <link rel="stylesheet" href= "node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href= "node_modules/bootstrap.min.css">
     <link rel= "stylesheet" href="styles.css">
     
     
@@ -16,23 +16,30 @@
 <br>
    
 <article>
-    <form id="gameForm">
+    <form id="gameForm" class="row g-3">
+        <div class=col-auto">
         <fieldset>
-
-          <input type ="text" id="ingredientInput" placeholder="Enter Ingridient...">
-          <input type="number" id="numOfDrinksInput" placeholder="Number of drinks" >
-          <button type="submit">Search</button>
+        <label for="ingredientInput" class="visually-hidden">Ingredient</label>
+          <input type ="text" id="ingredientInput" class="form-control" placeholder="Enter Ingredient...required">
+          </div>
+          <div class="col-auto"> 
+            <label for=" for=numOfDrinksInput" class="visually-hidden"></label>
+            <input type="number" id="numOfDrinksInput" placeholder="Number of drinks" required>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="button btn-primary">Search</button>
+          </div>
           <input type="reset" id="resetButton" value="Reset" />  
        </fieldset>
       </form>
 </article>
 
 <br>
-<div id="randomCocktail">
+<div id="randomCocktail" class="row row-cols-1 row-cols-md-3 9-4"></div>
     <ul>
         <li>
             <!-- <h6>Number Of Drinks Appear Here</h6> -->
-    Random cocktail details will be inserted here!
+    Cocktail details will be inserted here!
         </ul>
 </div>
   
@@ -49,7 +56,7 @@
         
  
     
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/bootstrap/.bundle.min.js"></script>
     <script defer src="script.js"></script>
     
 </body>

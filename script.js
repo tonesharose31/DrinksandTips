@@ -28,11 +28,15 @@ cocktailForm.addEventListener("submit", (e) => {
      for(let i= 0; i < numOfDrinks; i++){ 
      
      const cocktailElement= document.createElement("div");
+     cocktailElement.className = "col";
      const cocktail = allCocktail[i]
      cocktailElement.innerHTML =
-         `<h2>${cocktail.strDrink}</h2>
-         <img src= "${cocktail.strDrinkThumb}" alt= ${cocktail.strDrink}" />
-         <hr>` ; 
+         `
+         <div class ="card-body">
+         <img src= "${cocktail.strDrinkThumb}" alt= ${cocktail.strDrink}" class="card-img-top"/>
+         <h2>${cocktail.strDrink}</h2>
+         </div>
+         `; 
          randomCocktail.appendChild(cocktailElement);
      }
    

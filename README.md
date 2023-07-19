@@ -1,11 +1,8 @@
-Tic-Tac-Drinks is a app design for the public as a fun and entertainment app, whilst informative. As it was inspired by the idea of game nights. 
-
-The app allows for the users to have fun while going down the child-hood memory lane with adults drinks. Being competive while also learning about different varies of cocktaills. Their names, ingridents and even the instructions on how to make them. 
+Tip and Drinks is a app design for the public as an informative cocktail app. As it was inspired by the idea of learning more about adult drinks and how to make them.The app allows for learning about different varies of cocktaills. Their names, ingridents and even the instructions on how to make them. 
 
 
 
-The functionality of this app allows the user to play a game of competitive tic-tac-toe to see a winner at the end. (By Choice) 
-After a full round of play a winner of X or O is annonced or even if their is a tie. 
+The functionality of this app allows the user to 
 
 User also has access to a the reset button on the tic-tac-toe game incase of a restart. 
 
