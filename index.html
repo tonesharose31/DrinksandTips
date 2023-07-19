@@ -16,22 +16,21 @@
 <br>
    
 <article>
-    <form 
-    id="gameForm" class="row g-3">
-        <div class=col-auto">
-        <fieldset>
-        <label for="ingredientInput"></label>
-          <input type ="text" id="ingredientInput" class="form-control" placeholder="Enter Ingredients" required>
+    <form id="gameForm" class="row g-3">
+        <div class="col-auto">
+        
+        <label for="ingredientInput" class="visually-hidden"></label>
+          <input type ="text" id="ingredientInput" class="form-control" placeholder="Enter Ingredient...required">
           </div>
           <div class="col-auto"> 
-            <label for=" for=numOfDrinksInput" class="visually-hidden"></label>
+            <label for=" for=numOfDrinksInput"></label>
             <input type="number" id="numOfDrinksInput" placeholder="Number of drinks" required>
         </div>
         <div class="col-auto">
           <button type="submit" class="button btn-primary">Search</button>
           </div>
           <input type="reset" id="resetButton" value="Reset" />  
-       </fieldset>
+       
       </form>
 </article>
 
