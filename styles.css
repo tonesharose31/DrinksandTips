@@ -92,7 +92,10 @@ h2,h3,h4{
 }
 
 .comment{
+  font-weight: 20;
+  font-style: italic;
   margin-bottom: 20px;
   padding: 10px;
   border: 1px solid blueviolet;
+  background-color: blueviolet;
 }

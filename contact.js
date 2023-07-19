@@ -11,8 +11,7 @@ commentElement.innerHTML = `
 <strong>${name}</strong>
 <p>${commentary}</p>
 <hr>`;
-
 commentsContainer.appendchild(commentElement);
 document.getElementById("nameInput").value="";
 document.getElementById("commentaryInput").value="";
-});
+})
