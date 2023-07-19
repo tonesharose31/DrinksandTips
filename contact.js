@@ -1,5 +1,5 @@
 const commentaryForm= document.querySelector("#commentaryForm");
-commentaryForm.addEventListener("submit", (e) => {
+commentaryForm.addEventListener("click", (e) => {
     e.preventDefault();
 
 const name = document.getElementById("nameInput").value;
